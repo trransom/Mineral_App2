@@ -1,0 +1,14 @@
+{% extends 'minerals/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="minerals__container">
+
+{% for mineral in minerals %}
+		<div class="minerals__anchor"><a href="{% url 'minerals:detail' pk=mineral.pk %}">{{ mineral.name }}</a>
+			</div>
+{% endfor %}
+</div>
+{% endblock %}

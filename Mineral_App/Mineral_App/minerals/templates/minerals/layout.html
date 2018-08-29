@@ -1,0 +1,87 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mucho Minerals</title>
+		<link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
+	</head>
+	
+	
+	
+	
+	<body>
+	<div class="logo-margin">
+	<div class="logo">
+		<img src="/static/images/430094-64.png" />
+		<header class="logo__name">{% block title %}<a href="{% url 'minerals:index' 'A' %}">Mucho Minerales{% endblock %}</a></header>
+	</div>
+	</div>
+	
+	<div id="groups">
+	<div class="group-table">
+		<ul id="vertical-list">
+			<li><a class="{% if request.path == '/minerals/group_view/<silicate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='silicate' %}">Silicates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<oxide/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='oxide' %}">Oxides</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<sulfate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='sulfate' %}">Sulfates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<carbonate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='carbonate' %}">Carbonates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<halide/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='halide' %}">Halides</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<sulfosalt/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='sulfosalt' %}">Sulfosalts</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<phosphate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='phosphate' %}">Phosphates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<borate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='borate' %}">Borates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<organic/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='organic' %}">Organic Minerals</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<arsenate/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='arsenate' %}">Arsenates</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<native/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='native' %}">Native Elements</a></li>
+			<li><a class="{% if request.path == '/minerals/group_view/<other/' %}bold-white{% endif %}" href="{% url 'minerals:group_view' group='other' %}">Other</a></li>
+		</ul>
+	</div>
+	</div>
+	<!-- Search Bar -->
+	<div id="list">
+	<div class="menu-table">
+		<ul id="horizontal-list">
+		<div>
+			<li><a class="{% if request.path == '/minerals/index/A' %}bold{% endif %}" href="{% url 'minerals:index' 'A' %}">A</a></li>
+			<li><a class="{% if request.path == '/minerals/index/B' %}bold{% endif %}" href="{% url 'minerals:index' 'B' %}">B</a></li>
+			<li><a class="{% if request.path == '/minerals/index/C' %}bold{% endif %}" href="{% url 'minerals:index' 'C' %}">C</a></li>
+			<li><a class="{% if request.path == '/minerals/index/D' %}bold{% endif %}" href="{% url 'minerals:index' 'D' %}">D</a></li>
+			<li><a class="{% if request.path == '/minerals/index/E' %}bold{% endif %}" href="{% url 'minerals:index' 'E' %}">E</a></li>
+			<li><a class="{% if request.path == '/minerals/index/F' %}bold{% endif %}" href="{% url 'minerals:index' 'F' %}">F</a></li>
+			<li><a class="{% if request.path == '/minerals/index/G' %}bold{% endif %}" href="{% url 'minerals:index' 'G' %}">G</a></li>
+			<li><a class="{% if request.path == '/minerals/index/H' %}bold{% endif %}" href="{% url 'minerals:index' 'H' %}">H</a></li>
+			<li><a class="{% if request.path == '/minerals/index/I' %}bold{% endif %}" href="{% url 'minerals:index' 'I' %}">I</a></li>
+			<li><a class="{% if request.path == '/minerals/index/J' %}bold{% endif %}" href="{% url 'minerals:index' 'J' %}">J</a></li>
+			<li><a class="{% if request.path == '/minerals/index/K' %}bold{% endif %}" href="{% url 'minerals:index' 'K' %}">K</a></li>
+			<li><a class="{% if request.path == '/minerals/index/L' %}bold{% endif %}" href="{% url 'minerals:index' 'L' %}">L</a></li>
+			<li><a class="{% if request.path == '/minerals/index/M' %}bold{% endif %}" href="{% url 'minerals:index' 'M' %}">M</a></li>
+			<li><a class="{% if request.path == '/minerals/index/N' %}bold{% endif %}" href="{% url 'minerals:index' 'N' %}">N</a></li>
+			<li><a class="{% if request.path == '/minerals/index/O' %}bold{% endif %}" href="{% url 'minerals:index' 'O' %}">O</a></li>
+			<li><a class="{% if request.path == '/minerals/index/P' %}bold{% endif %}" href="{% url 'minerals:index' 'P' %}">P</a></li>
+			<li><a class="{% if request.path == '/minerals/index/Q' %}bold{% endif %}" href="{% url 'minerals:index' 'Q' %}">Q</a></li>
+			<li><a class="{% if request.path == '/minerals/index/R' %}bold{% endif %}" href="{% url 'minerals:index' 'R' %}">R</a></li>
+			<li><a class="{% if request.path == '/minerals/index/S' %}bold{% endif %}" href="{% url 'minerals:index' 'S' %}">S</a></li>
+			<li><a class="{% if request.path == '/minerals/index/T' %}bold{% endif %}" href="{% url 'minerals:index' 'T' %}">T</a></li>
+			<li><a class="{% if request.path == '/minerals/index/U' %}bold{% endif %}" href="{% url 'minerals:index' 'U' %}">U</a></li>
+			<li><a class="{% if request.path == '/minerals/index/V' %}bold{% endif %}" href="{% url 'minerals:index' 'V' %}">V</a></li>
+			<li><a class="{% if request.path == '/minerals/index/W' %}bold{% endif %}" href="{% url 'minerals:index' 'W' %}">W</a></li>
+			<li><a class="{% if request.path == '/minerals/index/X' %}bold{% endif %}" href="{% url 'minerals:index' 'X' %}">X</a></li>
+			<li><a class="{% if request.path == '/minerals/index/Y' %}bold{% endif %}" href="{% url 'minerals:index' 'Y' %}">Y</a></li>
+			<li><a class="{% if request.path == '/minerals/index/Z' %}bold{% endif %}" href="{% url 'minerals:index' 'Z' %}">Z</a></li>
+		</div>
+		</ul>
+	
+	</div>
+	</div>
+	
+	<!-- Search Form -->
+	<div class="searchbar">
+	<form id="searchbar" method="GET" action="{% url 'minerals:search_results' %}">
+		<input class="input-button-home" type="submit" value="Search" />
+		<div class="input-home">
+		<input type="text" name='q' style="width:100%" />
+		</div>
+	</form>
+	</div>
+	
+	{% block content %}{% endblock %}
+	</body>
+</html>

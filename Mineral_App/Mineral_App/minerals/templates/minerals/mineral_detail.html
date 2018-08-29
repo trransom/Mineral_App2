@@ -1,0 +1,73 @@
+{% extends 'minerals/layout.html' %}
+
+{% load static %}
+{% block content %}
+<title>Mineral Details</title>
+	<div class="mineral__container">
+	<article>
+		<div class="mineral__name">
+			<h2>{{ mineral.name }}</h2>
+		</div>
+		<div class="mineral__caption">
+			<h3>{{ mineral.img_caption|title }}</h3>
+		</div>
+		<div class="mineral__image-bg">
+			<img class="mineral__image" src="{% static 'images' %}/{{ mineral.img_filename }}" alt="{{ mineral.img_filename }}" height="100px" width="100px">
+		</div>
+		<div class="mineral__table-container">
+			<div class="mineral__category">
+			<table class="mineral__table">
+					<tr>
+						<td>Category: {{ mineral.category|title }}</td>
+					</tr>
+				
+					<tr>
+						<td>Formula: {{ mineral.formula|title }}</td>
+					</tr>
+					<tr>
+						<td>Strunz Class: {{ mineral.strunz_class|title }}</td>
+					</tr>
+					<tr>
+						<td>Color: {{ mineral.color|title }}</td>
+					</tr>
+					<tr>
+						<td>Crystal System: {{ mineral.crystal_sys|title }}</td>
+					</tr>
+					<tr>
+						<td>Unit Cell: {{ mineral.unit_cell|title }}</td>
+					<tr>
+						<td>Crystal Symmetry: {{ crystal_sym|title }}</td>
+					</tr>
+					<tr>
+						<td>Cleavage: {{ mineral.cleavage|title }}</td>
+					</tr>
+					<tr>
+						<td>Mohs Scale Hardness: {{ mineral.mohs|title }}</td>
+					</tr>
+					<tr>
+						<td>Luster: {{ mineral.luster|title }}</td>
+					</tr>
+					<tr>
+						<td>Streak: {{ mineral.streak|title }}</td>
+					</tr>
+					<tr>
+						<td>Diaphaneity: {{ mineral.diaphaneity|title }}</td>
+					</td>
+					<tr>
+						<td>Optical Properties: {{ mineral.optical_prop|title }}</td>
+					</tr>
+					<tr>
+						<td>Refractive Index: {{ mineral.refractive_inx|title }}</td>
+					</tr>
+					<tr>
+						<td>Crystal Habit: {{ mineral.crystal_hab|title }}</td>
+					</tr>
+					<tr>
+						<td>Specific Gravity: {{ mineral.spec_grav|title }}</td>
+					</tr>
+				</div>
+			</table>
+		</div>
+	</article>
+	</div>
+	{% endblock %}
