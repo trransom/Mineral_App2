@@ -49,10 +49,9 @@ class CourseViewsTests(TestCase):
 		
 	def test_index_view(self):
 		'''Tests the index display of the minerals.'''
-		resp = self.client.get(reverse('minerals:index'))
+		resp = self.client.get(reverse('minerals:index', kwargs={'letter': 'A'}))
 		self.assertEqual(resp.status_code, 200)
 		self.assertIn(self.mineral, resp.context['minerals'])
-		self.assertIn(self.mineral2, resp.context['minerals'])
 		self.assertTemplateUsed(resp, 'minerals/index.html')
 		
 	def test_mineral_view(self):
@@ -63,12 +62,12 @@ class CourseViewsTests(TestCase):
 		
 	def test_search_results(self):
 		'''Tests the detail view of a selected mineral.'''
-		resp = self.client.get(reverse('minerals:search_results', kwargs={'q': self.mineral.name}))
+		resp = self.client.get(reverse('minerals:search_results'), {'q': 'Aegirine'})#, kwargs={'q': 'Aegirine'}
 		self.assertEqual(resp.status_code, 200)
 		self.assertIn(self.mineral, resp.context['minerals'])
 		
 	def test_group_view(self):
 		'''Tests the view showing groups of minerals.'''
-		resp = self.client.get(reverse('minerals:group_view', kwargs={'group': self.mineral.category}))
+		resp = self.client.get(reverse('minerals:group_view', kwargs={'group': 'silicate'}))
 		self.assertEqual(resp.status_code, 200)
 		self.assertIn(self.mineral, resp.context['minerals'])
