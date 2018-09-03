@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
+	url(r'', include(('minerals.urls', 'minerals'), namespace='minerals')),
 	url(r'^minerals/', include(('minerals.urls', 'minerals'), namespace='minerals')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

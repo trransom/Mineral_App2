@@ -16,6 +16,11 @@ def in_group(str):
 			return True;
 	return False;
 	
+def route(request):
+	'''Reroutes to the index view.'''
+	minerals=Mineral.objects.filter(name__startswith='A')
+	return render(request, 'minerals/index.html', {'minerals': minerals})
+	
 	
 def index(request, letter):
 	'''Returns a list of all the minerals in the database.'''
