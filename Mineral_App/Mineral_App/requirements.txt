@@ -14,7 +14,7 @@ idna==2.7
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
-nltk==3.3
+nltk==3.4.5
 numpy==1.14.5
 peewee==3.5.0
 pipreqs==0.4.9
