@@ -15,7 +15,7 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 nltk==3.3
-numpy==1.14.5
+numpy==1.22.0
 peewee==3.5.0
 pipreqs==0.4.9
 psycopg2==2.7.4
